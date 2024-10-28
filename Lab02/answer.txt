@@ -1,0 +1,15 @@
+Câu hỏi 1: Nếu bạn tạo một phương thức constructor để xây dựng DVD theo tiêu đề (title), sau đó tạo một constructor để xây dựng DVD theo thể loại (category), Java có cho phép làm điều này không?
+Trả lời:
+	Java cho phép tạo nhiều constructor trong cùng một lớp với các tham số khác nhau thông qua tính năng method overloading (nạp chồng phương thức). Điều này có nghĩa là bạn có thể tạo các constructor với các danh sách tham số khác nhau trong cùng một lớp mà không gây ra lỗi. Trong trường hợp này, bạn có thể tạo một constructor chỉ với title, một constructor khác với category, hoặc một constructor có cả title và category. Java sẽ chọn constructor phù hợp dựa trên số lượng và kiểu dữ liệu của các tham số khi bạn khởi tạo đối tượng.
+Câu hỏi 2: Khi nào nên sử dụng các phương thức truy xuất (getter) và thiết lập (setter)?
+Trả lời: 
+	Getter và setter nên được sử dụng khi cần cung cấp truy cập có kiểm soát tới các thuộc tính private của một đối tượng từ bên ngoài. Dưới đây là các trường hợp sử dụng phổ biến:
+
+Getter:
+
+	Được sử dụng để cung cấp quyền truy cập vào các thuộc tính của một đối tượng mà không cho phép thay đổi.
+	Ví dụ, trong trường hợp lớp DigitalVideoDisc, có thể cần truy cập vào thông tin của DVD nhưng không cần thay đổi các thuộc tính như 	title, category, director, vì vậy chỉ cần sử dụng các phương thức getter.
+Setter:
+
+	Được sử dụng khi cần thay đổi giá trị của thuộc tính từ bên ngoài nhưng cần kiểm soát chặt chẽ. Ví dụ, setter có thể bao gồm kiểm 	tra điều kiện trước khi thay đổi giá trị.
+	Đối với các đối tượng mà dữ liệu của chúng cần bất biến (như thông tin DVD trong giỏ hàng), ta có thể không cần setter để tránh thay 	đổi ngoài ý muốn.
