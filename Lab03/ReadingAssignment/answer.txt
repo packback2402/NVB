@@ -1,0 +1,10 @@
+Việc sử dụng varargs mang lại sự linh hoạt hơn bởi nó cho phép thêm bất kỳ số lượng đĩa DVD nào mà không cần phải khai báo một mảng cụ thể. Điều này giúp mã nguồn trở nên gọn gàng và dễ đọc hơn, đồng thời cũng thuận tiện hơn khi gọi phương thức. Vì vậy, em thấy phương thức sử dụng varargs rất hữu ích và phù hợp.
+
+1. Java là ngôn ngữ lập trình "Pass by Value" hay "Pass by Reference"?
+Java là một ngôn ngữ lập trình sử dụng cơ chế "Pass by Value". Khi truyền tham số vào phương thức, Java sẽ sao chép giá trị của tham số và sử dụng bản sao đó trong phương thức. Do đó, mọi thay đổi trên tham số bên trong phương thức sẽ không ảnh hưởng đến giá trị của biến gốc mà bạn truyền vào.
+
+2. Tại sao sau khi gọi swap(jungleDVD, cinderellaDVD), tiêu đề của hai đối tượng vẫn không thay đổi?
+Sau khi thực hiện phương thức swap(jungleDVD, cinderellaDVD), tiêu đề của cả hai đối tượng vẫn không thay đổi vì Java truyền giá trị tham chiếu của các đối tượng chứ không phải bản thân đối tượng. Bất kỳ thay đổi nào đối với tham số bên trong phương thức, chẳng hạn như hoán đổi giữa o1 và o2, chỉ ảnh hưởng đến các tham chiếu cục bộ, không tác động đến các đối tượng ban đầu.
+
+3. Tại sao tiêu đề của jungleDVD thay đổi sau khi gọi changeTitle(jungleDVD, cinderellaDVD.getTitle())?
+Sau khi gọi changeTitle(jungleDVD, cinderellaDVD.getTitle()), tiêu đề của jungleDVD thay đổi vì phương thức changeTitle thực hiện thao tác trực tiếp lên đối tượng được truyền vào. Cụ thể, lệnh dvd.setTitle(title) thay đổi tiêu đề của đối tượng gốc mà tham chiếu dvd đang trỏ đến. Do đó, sự thay đổi này được phản ánh lên chính đối tượng ban đầu.
